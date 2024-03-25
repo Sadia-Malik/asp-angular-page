@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular: A Beginner's Guide</title>
+    <meta name="description" content="Angular is a popular open source framework written in TypeScript (a superset of JavaScript) for building web applications." />
+    <meta name="keywords" content="Angular, Angular.js, asp.net core" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<style>
+		.accordion-item:first-child:before { content:"1"; }
+.sky_sec .accordion-item:nth-child(2):before { content:"2"; }
+.sky_sec .accordion-item:nth-child(3):before { content:"3"; }
+/* .sky_sec .accordion-item:nth-child(4):before { content:"4"; }
+.sky_sec .accordion-item:last-child:before { content:"5"; } */
+/* .sk1 .accordion-item:nth-child(3):before { content:"6"; } */
+/* .sk1 .accordion-item:last-child:before { content:"7" !important; } */
+.sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:first-child:before  { content:"4"; }
+.sky_sec .accordion-item:nth-child(5):before , #rt .accordion-item:nth-child(2):before  { content:"5"; }
+.sky_sec .accordion-item:nth-child(6):before , #rt .accordion-item:last-child:before  { content:"6"; }
+	</style>
+</head>
+<body>
+<!--
+:::::Header Section
+-->
+<!-- <div class="nav-bar11"> -->
+    <header class="position-fixed w-100 inner_banner " id="header">
+        <div class="container position-relative ">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100 ">
+                  <div class="container  position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
+                    <a class="navbar-brand my-auto" href="index.html">
+                        <div class="d-md-none d-block">
+                            <img src="images/logo1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="navbar-brand-img d-md-block d-none">
+                            <img src="images/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                      <button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+                    <div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto navbar-light">
+                              <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="asp-net-core-guide.html">ASP.NET Core</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link " href="blazor.html">Blazor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">React</a>
+                            </li>
+                              
+                              <li class="nav-item">
+                                  <a class="nav-link active" href="angular.html">Angular</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Vue</a>
+                              </li>	
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="login transition position-absolute">
+                <a href="index.html" class="btn border-0 transition btn-primary createSite">Create Free Site</a>
+            </div>
+            
+        </div>
+    </header>
+<!-- </div> -->
+
+<div class="sidebar_area blazor_page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left_nav">
+					<ul>
+						<li><a class="active" href="blazor.html"> <i class="bi bi-layout-text-window-reverse"></i>What is Angular</a></li>
+					</ul>
+				</div>
+				<!--<div id="accordion" class="d-lg-none d-block other">
+  <div class="card  border-0 bg-transparent">
+    <div class="card-header  p-0" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link bg-transparent w-100 text-start border-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          See Other Menu
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="left_nav">
+					<ul>
+						<li><a class="text-white wh_border" href="blazor.html"><img src="images/asp.png" class="img-fluid" alt="">Blazor For Beginners</a></li>
+						
+					</ul>
+				</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>-->
+			</div>
+			<div class="col-lg-9 srt">
+				<div class="pb-4">
+					<h1>Angular: A Beginner's Guide</h1>
+					<div class="clearfix">
+						<img src="images/ang-1.png" class="img-fluid" alt="">
+						<p>If you are learning web development or a professional, you've likely come across the term Angular. But what exactly is Angular, and why is it so important in the world of web development? In this guide, we will explore Angular, its features, advantages, and how it can be used in conjunction with ASP.NET Core.</p>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+		
+		<div class="col-sm-12 srt ">
+				<div class="pb-4">
+					<h1>What is Angular?</h1>
+					<div class="clearfix">
+						
+<p>Angular is a popular open source framework written in TypeScript (a superset of JavaScript) for building web applications. It's often used for creating dynamic and interactive web pages and single-page applications (SPA). Angular is developed by Google and maintained by Google and a community of developers, making it a reliable and well-supported choice for web development.</p>
+<h3 class="angular-h3">Angular vs AngularJS</h3>
+<p>Before diving deeper into Angular, let's clarify the difference between Angular and AngularJS. AngularJS, often referred to as Angular 1, was the first version of the framework and is discontinued now. However, Angular (without the "JS") represents a complete rewrite of AngularJS and is often referred to as Angular 2+ or just Angular. The key difference is that Angular is built using TypeScript, which is a statically typed superset of JavaScript, while AngularJS uses plain JavaScript.</p>
+<h3 class="angular-h3">Angular Versions</h3>
+<p>Angular, like many software projects, has different versions. It's essential to use the latest version of Angular to take advantage of the newest features, improvements, and security updates.
+
+</p>
+<p>At the time of writing this article, the latest version of Angular is Angular 16.2, but it's always a good idea to check the <a href="https://angular.io/guide/releases" target="_blank">Angular website</a> website for the most up-to-date information.</p>
+<h3 class="angular-h3">Angular Components</h3>
+<p>Angular applications are built using component-based architecture. Angular Components are building blocks of an Angular application, and they encapsulate the HTML, CSS, and TypeScript code needed for a specific part of the user interface.</p>
+<p>For example, if you're building an e-commerce website, you might have components for the product list, product details, shopping cart, and more. These components can be reused throughout your application, making it easier to manage and maintain.</p>
+<h3 class="angular-h3">Angular Forms</h3>
+<p>Angular provides powerful tools for working with forms. Whether you need a simple login form or a complex multi-step wizard, Angular's form features have got you covered. You can easily create forms, validate user input, and handle form submissions.</p>
+<h3 class="angular-h3">Angular Routing</h3>
+<p>Routing in Angular allows you to navigate between different views or components in your application. You can define routes and associate them with specific Angular components. When user clicks on a link or enters a URL, Angular will load the appropriate component and display it in the view.</p>
+<h3 class="angular-h3">Angular Directives</h3>
+<p>Angular Directives are a fundamental part of Angular. They are instructions in the DOM (Document Object Model) that tell Angular how to manipulate the HTML elements. For example, the *ngIf directive is used to conditionally show or remove an element based on a condition.</p>
+<h3 class="angular-h3">Angular Services
+</h3>
+<p>Services in Angular are used to encapsulate reusable functionality, such as making HTTP requests to a server, sharing data between Angular components, or performing business logic. Angular Services are a way to keep your code organized and promote code reusability.</p>
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div class="row">
+		<div class="col-md-4 col-sm-12 col-g-4 ">
+		  <div class="blazor_box ">
+		    <img src="images/ang-2.jpg"/>
+			<h3>Angular Lifecycle Hooks</h3>
+			<p>Angular components have a lifecycle, and you can hook into various lifecycle events to perform actions at different stages of a component's existence. Some common lifecycle hooks include ngOnInit, ngOnChanges, and ngOnDestroy.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		   <div class="blazor_box">
+		    <img src="images/ang-3.jpg"/>
+			<h3>Angular Pipes</h3>
+			<p>Pipes in Angular are used to transform data before it is displayed in the view. For example, the date pipe can format a date in a specific way, and the uppercase pipe can convert text to uppercase.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="blazor_box">
+		    <img src="images/ang-6.png"/>
+			<h3>Angular CLI</h3>
+             <p>Angular CLI, a command-line interface for Angular. It provides a set of tools for creating, building and deploying Angular applications. With Angular CLI, we can quickly create new projects, and generate new components, services, etc.</p>
+		 </div>
+		</div>
+	  </div>
+		
+		
+	</div>
+</div>
+
+<div class="code_area blazor_code">
+	<div class="container">
+		<h2>Angular Tutorial</h2>
+		<p>Let’s start with a very basic Hello Word tutorial. We will create a simple component here and show it on the main page.</p>
+		<h3>Install Node JS:</h3>
+		<ul>
+			<li>Make sure you have Node.js and npm (Node Package Manager) installed on your computer. You can download Node.js from its <a href="https://nodejs.org/en/download" target="_blank">official site</a>. It also includes npm.</li>
+		</ul>
+		<h3>Install Angular CLI:</h3>
+		<ul>
+			<li>Open your terminal or command prompt.</li>
+			<li>Run this command to install Angular CLI globally:			</li>
+		</ul>
+		<div class="code">
+        <p>npm install  -g @angular/cli</p>
+	   </div>
+	   <h3>Create a New Angular App:</h3>
+	    <ul>
+			<li>Open the terminal or command prompt and navigate to the directory where you want to create your Angular project and run:</li>
+		</ul>
+		<div class="code">
+			<p>ng <span class="skytxt">new</span> hello-world-app</p>
+		</div>
+		<ul>
+			<li>Follow the prompts to configure your project (you can choose the defaults for most options).</li>
+		</ul>
+		<h3> Generate Component:</h3>
+		<ul>
+			<li>In terminal, navigate to the project folder you just created:</li>
+		</ul>
+		<div class="code">
+			<p>cd hello-world-app</p>
+		</div>
+		<ul>
+           <li> Then, generate a new component using Angular CLI: ng generate component hello</li>	
+		</ul>
+       <h3>Edit Component:</h3>
+	   <ul>
+		<li>Open src/app/hello/hello.component.html in code editor and replace its content with: <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></li>
+	   </ul>
+	   <h3>Display Angular Component:</h3>
+	    <ul>
+			<li>Open src/app/app.component.html and add the <code>&lt;app-hello&gt;&lt;/app-hello&gt;</code> tag at the end of the existing HTML.</li>
+		</ul>
+		<h3>Run Angular App:</h3>
+		<ul>
+			<li>Start the development server using this command: ng serve</li>
+			<li>Visit http://localhost:4200/ in the web browser, and you should see your "Hello, World!" message displayed at the end of the default Angular HTML page.</li>
+		</ul>
+		<h2>Angular with ASP.NET Core</h2>
+		<p>Now that you have a basic understanding of Angular, let's explore how you can use Angular with ASP.NET Core, a popular framework for building server-side web applications.</p>
+		<p>Angular and ASP.NET Core are a powerful combination for building modern web applications. Here are some reasons why they work well together:		</p>
+		<ul>
+			<li>Separation of Concerns: Angular handles the client-side user interface, while ASP.NET Core takes care of the server-side logic. This separation allows for cleaner code and better maintainability.</li>
+			<li>API Integration: Angular can easily consume RESTful APIs created with ASP.NET Core, enabling seamless communication between the front-end and backend of your application.</li>
+			<li>Single-Page Applications (SPAs): Angular is well-suited for creating SPAs, where the entire application loads in a single HTML page, and navigation happens dynamically without full page reloads. ASP.NET Core can serve as the backend for such applications.</li>
+		</ul>
+		<h3>Steps for Creating an Angular and ASP.NET Core Application</h3>
+		<p>Let's walk through a simple example of creating a task management application using Angular for the front-end and ASP.NET Core for the backend.</p>
+		<h3>Angular Frontend:</h3>
+		<ul>
+			<li>Create Angular components for tasks, task lists, and task creation forms.</li>
+			<li>Use Angular forms to collect and validate task data.</li>
+			<li>Implement Angular routing for navigating between different views.</li>
+			<li>Use Angular's HTTP client to communicate with the ASP.NET Core API.</li>
+			<li><h5>Integration:</h5></li>
+		</ul>
+		<h3>ASP.NET Core Backend:</h3>
+		<ul>
+			<li>Create a RESTful API for managing tasks, including endpoints for creating, updating, deleting, and fetching tasks.</li>
+			<li>Implement data validation and error handling in the backend.</li>
+			<li>Secure the API using authentication and authorization mechanisms if necessary.</li>
+		</ul>
+		<h3>Integration:</h3>
+		<ul>
+			<li>Configure Angular to make HTTP requests to the ASP.NET Core API endpoints.</li>
+			<li>Handle data sent from the backend in the front-end and display it to the user.</li>
+			<li>Implement error handling in Angular to gracefully handle API errors.</li>
+		</ul>
+		<br>
+		<p>By combining the strengths of Angular and ASP.NET Core, you can create a robust web application that provides seamless user experience and efficiently manages data on the server side.</p>
+		<h2>Angular Hosting</h2>
+		<p>After you've developed your Angular app, you'll need to host it on a web server so that users can access it online. While there are various hosting options available, including paid services and cloud platforms, <a href="http://aspnetcore.net/" target="_blank">ASPNETCORE.NET</a> is one of the best and always free.
+
+		</p>
+		<p><a href="http://aspnetcore.net/" target="_blank">ASPNETCORE.NET</a> is a hosting platform that provides services for hosting ASP.NET Core, Blazor apps, React, Angular, and Vue.js applications.
+
+		</p>
+		<!-- ********************** -->
+		
+       
+
+
+		<div class="mt-3 pt-3 clearfix">
+			<h1>Summary</h1>
+			<img src="images/ang-8.png" class="img-fluid" alt="">
+			<p>In this beginner's guide about Angular we've covered the basics of what Angular is, how to get started with it, and its core concepts. We've also explored how Angular can be used alongside ASP.NET Core to build modern web applications.</p>
+			<p>So, if you're eager to learn more about the world of web development and create interactive and engaging web applications, give Angular a try. With its extensive documentation and vibrant community you'll find plenty of resources to help you on your journey to becoming an Angular expert.</p>	
+		</div>
+		
+		
+	</div>
+</div>
+
+<!--
+:::::accordian Section
+-->
+<div id="inj" class="acc_area pb-5 blazor_faq">
+	<div class="container">		
+<h1>FAQs about Angular</h1>
+		<div class="row gx-5">
+			<div class="col-lg-6 sky_sec">
+				
+				<div class="accordion pt-0" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOn">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+						How to check the version of Angular?
+					  </button>
+					</h2>
+					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						Use the "ng version" command in your terminal or command prompt to check the Angular version.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo35">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo35" aria-expanded="false" aria-controls="collapseTwo35">
+                        How to install Angular CLI?
+					  </button>
+					</h2>
+					<div id="collapseTwo35" class="accordion-collapse collapse" aria-labelledby="headingTwo35" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						Install Angular CLI globally with the command "npm install -g @angular/cli" (requires Node.js and npm).					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo34">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo34" aria-expanded="false" aria-controls="collapseTwo34">
+						Is Angular open source?
+					  </button>
+					</h2>
+					<div id="collapseTwo34" class="accordion-collapse collapse" aria-labelledby="headingTwo34" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						Yes, Angular is open-source and maintained by Google. It has a strong community of contributors.					  </div>
+					</div>
+				  </div>
+				  
+				   
+	
+					</div>
+			</div>
+
+			<div id="rt" class="col-lg-6 sky_sec">
+				  
+				<div class="accordion pt-0" id="accordionExample1">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneone" aria-expanded="true" aria-controls="collapseOne1">
+						Is Angular a framework?
+					  </button>
+					</h2>
+					<div id="collapseOneone" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						Yes, Angular is a front-end framework for building web applications with a strong focus on structured development using TypeScript.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+						What is Angular used for?					  </button>
+					</h2>
+					<div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						Angular is used for building dynamic front-end web applications, providing tools for building interactive, single-page applications (SPAs).					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo22">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
+						Is Angular better than React?					  </button>
+					</h2>
+					<div id="collapseTwo22" class="accordion-collapse collapse" aria-labelledby="headingTwo22" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						The choice between Angular and React depends on the project's requirements and developer preferences. Both have strengths, and the better choice varies based on the specific context.					  </div>
+					</div>
+				  </div>
+				  
+				 
+				
+
+				
+					</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div><a href="#"><img src="images/f-logo.png" class="img-fluid" alt=""></a></div>
+		<div class="pt-4 mt-4">
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about-us.html">About Us</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Contact </a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="copy">&copy; 2023 ASPNETCore.net</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script>
+        $(function () { 
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo1.png');
+                }
+                if ($(this).scrollTop() < 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo.png');
+                }
+            })
+        });
+    </script>
+<script>
+$("#more1").click(function(){
+    $("#more1").hide();
+});
+$("#more2").click(function(){
+    $("#more2").hide();
+});
+$("#more3").click(function(){
+    $("#more3").hide();
+});
+</script>
+</body>
+</html>
