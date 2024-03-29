@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue - A Beginner's Guide for Interactive Websites</title>
+    <meta name="description" content="Vue.js is known for its gentle learning curve. Its syntax is easy to understand which makes it an excellent choice for developers who are just starting." />
+    <meta name="keywords" content="Vue, Vue.js" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+.accordion-item:first-child:before { content:"1"; }
+.sky_sec .accordion-item:nth-child(2):before { content:"2"; }
+.sky_sec .accordion-item:nth-child(3):before { content:"3"; }
+
+.sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:first-child:before  { content:"4"; }
+/* .sky_sec .accordion-item:nth-child(5):before , #rt .accordion-item:nth-child(2):before  { content:"5"; } */
+.sky_sec .accordion-item:nth-child(5):before , #rt .accordion-item:last-child:before  { content:"5"; }
+    </style>
+</head>
+<body>
+<!--
+:::::Header Section
+-->
+<!-- <div class="nav-bar11"> -->
+    <header class="position-fixed w-100 inner_banner " id="header">
+        <div class="container position-relative ">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100 ">
+                  <div class="container  position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
+                    <a class="navbar-brand my-auto" href="index.html">
+                        <div class="d-md-none d-block">
+                            <img src="images/logo1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="navbar-brand-img d-md-block d-none">
+                            <img src="images/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                      <button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+                    <div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto navbar-light">
+                              <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="asp-net-core-guide.html">ASP.NET Core</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link " href="blazor.html">Blazor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">React</a>
+                            </li>
+                              
+                              <li class="nav-item">
+                                  <a class="nav-link " href="angular.html">Angular</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Vue</a>
+                              </li>	
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="login transition position-absolute">
+                <a href="index.html" class="btn border-0 transition btn-primary createSite">Create Free Site</a>
+            </div>
+            
+        </div>
+    </header>
+<!-- </div> -->
+
+<div class="sidebar_area blazor_page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left_nav">
+					<ul>
+						<li><a class="active" href="blazor.html"> <i class="bi bi-layout-text-window-reverse"></i>What is Vue.js</a></li>
+					</ul>
+				</div>
+		
+			</div>
+			<div class="col-lg-9 srt">
+				<div class="pb-4">
+					<h1>Vue - A Beginner's Guide for Interactive Websites</h1>
+					<div class="clearfix">
+						<img src="images/vue-beg.png" class="img-fluid" alt="">
+                          <p>In this beginner's guide, we are going to introduce you to Vue.js, a JavaScript framework that has been gaining popularity rapidly due to its simplicity and versatility.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+		
+		<div class="col-sm-12 srt">
+				<div class="pb-4">
+					<h1>Vue.js</h1>
+					<div class="clearfix">
+						
+<p>Vue.js (in short “Vue” and often pronounced as "view") is an open-source JavaScript framework used for building user interfaces and single page applications, known for its simplicity and reactivity system. It was created by Evan You, a former Google employee. Published under the MIT License, which means that it's free to use, modify, and distribute.</p>
+<p>Vue.js is a progressive and flexible web framework that was designed to be easy to learn while still being powerful enough to build complex and scalable applications. Here we will take a closer look at what Vue.js is and why it's a great choice for ASP.NET Core developers.</p>
+
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div class="row">
+		<div class="col-md-4 col-sm-12 col-g-4 ">
+		  <div class="blazor_box ">
+		    <img src="images/vue1.png"/>
+			<h3>Vue vs React</h3>
+            <p>React developed by Facebook is one of the most popular JavaScript libraries for building UIs. It offers a highly efficient way to render and update UI components. However, React comes with a steeper learning curve, especially for beginners.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		   <div class="blazor_box">
+		    <img src="images/vue2.png"/>
+			<h3>Vue vs Angular</h3>
+			<p>Angular developed by Google is a comprehensive framework for building web applications. While it provides a robust set of tools it can be overwhelming for beginner web developers due to its complexity.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="blazor_box">
+		    <img src="images/vue3.png"/>
+			<h3>Vue Components</h3>
+			<p>Vue.js is built around the concept of components. A component is a self-contained, reusable piece of code that encapsulates a specific part of your user interface. Components make it easier to manage complex UIs by breaking them down into smaller and more manageable pieces.</p>
+		  </div>
+		</div>
+	  </div>
+		
+		
+	</div>
+</div>
+
+<div class="container">
+    <h3 class="angular-h3">
+        Vue Props
+    </h3>
+    <p>Vue Props (short for properties) is a way for passing data from parent component to a child component. They allow you to make your components more flexible and reusable. Let's take a look at an example.</p>
+    <h3 class="angular-h3">Vue Data Binding</h3>
+    <p>Data binding in Vue.js allows you to establish a connection between the data in your JavaScript code and the HTML elements in your template. There are two types of data binding:</p>
+    <ul>
+        <li>One-way Data Binding: In one-way data binding, data flows in one direction, from the JavaScript code to the HTML template.
+        </li>
+        <li>Two way Data Binding: Two-way data binding allows data to flow/move in both directions, from the JavaScript code to the HTML template and vice versa. It is primarily used with form elements like input fields.
+        </li>
+    </ul>
+    <h3 class="angular-h3">Vue Directive</h3>
+    <p>Vue.js provides a set of directives that you can use to add special behavior to your HTML elements. Directives are prefixed with “v-” and are used in the form of HTML attributes. Some of Built-in Directive are listed below.
+
+    </p>
+    <ul>
+        <li>v-if: Conditional rendering based on a condition.</li>
+        <li>v-for: Looping through an array to render a list of items.</li>
+        <li>v-on: Adding event listeners to elements.</li>
+        <li>v-bind: Binding values to element attributes.</li>
+        <li>v-model: Creating two-way data binding for form elements.</li>
+        <li>v-show: Conditional rendering with CSS display property.</li>
+        <li>v-pre: Skipping compilation for this element and all its children.</li>
+        <li>v-cloak: Used to keep an element and its children from being compiled until Vue.js is ready.</li>
+        <li>v-once: Render an element and its children only once.</li>
+    </ul>
+</div>
+
+<div class="code_area blazor_code">
+	<div class="container">
+		<h2>Vue Tutorial        </h2>
+        <h3>Install Vue        </h3>
+        <p>There are several ways to start using Vue.js, but for this guide, we'll keep it simple by including Vue.js through a Content Delivery Network (CDN). This means you won't have to download or install anything to get started.</p>
+            <p>To include Vue.js in your HTML file, add the following script tag inside the &lt;head&gt; section:</p>
+		
+		
+		<div class="code">
+
+			<span class="redtext"><</span>script <span>src</span><span class="redtext">=</span><span class="greentxt">"https://unpkg.com/vue@3/dist/vue.global.js"</span><span class="redtext">></span> <span class="redtext"><</span>/script<span class="redtext">></span>
+	
+		</div>
+<p>This script tag fetches Vue.js from a CDN, making it available for use in your project.</p>
+<h3>Create Vue App</h3>
+<p>Now, let's create a simple Vue.js application to understand the basics. We'll build a counter that increments each time a button is clicked. Simply create an HTML file and copy this code into that.</p>
+
+		
+
+        <div class="code">
+         <span class="redtext"><</span><span class="redtext">!</span> <span>DOCTYPE html</span><span class="redtext">></span> <br>
+         <!-- <span class="redtext"><!</span><span class="redtext">></span> -->
+         <span class="redtext"><</span><span class="skytxt">html</span> lang<span class="redtext">=</span><span class="greentxt">"en"</span><span class="redtext">></span> <br>
+         <span class="redtext"><</span>head<span class="redtext">></span> <br>
+         &nbsp; &nbsp; &nbsp;  <span class="redtext"><</span><span class="skytxt">meta</span> &nbsp; charset<span class="redtext">=</span><span class="greentxt">"UTF-8"</span><span class="redtext">></span> <br> <br>
+         &nbsp; &nbsp; &nbsp; <span class="redtext"><</span>title<span class="redtext">></span>My First Vue.js App <span class="redtext"><</span>/title<span class="redtext">></span><br/>
+         &nbsp; &nbsp; &nbsp; <span class="redtext"><</span>script <span>src</span><span class="redtext">=</span><span class="greentxt">"https://unpkg.com/vue@3/dist/vue.global.js"</span><span class="redtext">></span> <span class="redtext"><</span>/script<span class="redtext">></span><span class="redtext"><</span>/head<span class="redtext">></span><br/>
+        <span class="redtext"><</span>body<span class="redtext">></span><br/>
+        &nbsp; &nbsp; &nbsp; <span class="redtext"><</span><span class="skytxt">div</span>  &nbsp;  id<span class="redtext">=</span><span class="greentxt">"app"</span><span class="redtext">></span> <br>
+        &nbsp; &nbsp; &nbsp;  <span class="redtext"><</span>p<span class="redtext">></span>{{ message }} <span class="redtext"><</span>/p<span class="redtext">></span><br/>
+        &nbsp; &nbsp; &nbsp;  <span class="redtext"><</span>button <span>@click</span><span class="redtext">=</span><span class="greentxt">"incrementCounter"</span><span class="redtext">></span> <span>Increment</span> <span class="redtext"><</span><span>/button</span><span class="redtext">></span> <br>
+        &nbsp; &nbsp; &nbsp;  <span class="redtext"><</span>p<span class="redtext">></span><span>Counter:</span><span class="redtext"><</span>span<span class="redtext">></span><span>{{counter}}</span> <span class="redtext"><</span>/span<span class="redtext">></span> <span class="redtext"><</span>/p<span class="redtext">></span> <br>
+       <span class="redtext"><</span>/div<span class="redtext">></span> <br>
+       &nbsp; &nbsp; &nbsp; <span class="redtext"><</span>script<span class="redtext">></span> <br>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="skytxt">const</span>  <span>App</span> <span>=</span>  Vue.<span class="greentxt">createApp</span>  <span>  ({</span><br>
+      &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="greentxt">data</span> <span>()</span> <span>{</span> <br>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="skytxt">return</span> <span>{</span> <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>message:</span> <span>'Welcome to my Vue.js app <span class="redtext">!</span>',</span> <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>counter:</span> <span class="redtext">0</span> <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>}</span> <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>} ,</span> <br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>methods:</span> <span>{</span> <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="greentxt">incrementCounter</span>  <span>()</span> <span>{</span> <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="skytxt">this</span>.counter<span class="redtext">++</span>    <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>}</span> <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>}</span> <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span>})</span> <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span>App</span>.<span class="greentxt">mount</span><span>('#app')</span> <br>
+         <span class="redtext"><</span>/script<span class="redtext">></span> <br>
+         <span class="redtext"><</span>/body<span class="redtext">></span> <br>
+         <span class="redtext"><</span>/html<span class="redtext">></span> <br>
+         
+
+        </div>
+        
+        <p>In this example, we:</p>
+        <ul>
+            <li>Include Vue.js using a CDN.</li>
+            <li>Create a Vue app instance using Vue.createApp().</li>
+            <li>Define a data object to store our application's data.</li>
+            <li>Use Vue's double curly braces {{ }} syntax to display data.</li>
+            <li>Create a method incrementCounter to update the counter data property when the button is clicked.</li>
+            <li>Mount the Vue app to the #app element in the HTML.</li>
+        </ul>
+        <p>When you open this HTML file in your browser, you'll see a message and a button. Clicking the button will increment the counter value!        </p>
+        <h2>Vue with ASP.NET Core</h2>
+        <p>Vue.js and ASP.NET Core can interact seamlessly to build a full-stack web application. Here's a high-level overview of how these two technologies can interact:</p>
+		<h3>Frontend Development with Vue.js:
+
+        </h3>
+        <ul>
+            <li>You start by developing the frontend of your web application using Vue.js. Vue.js is responsible for creating the user interface and handling client-side interactions.</li>
+            <li>Vue.js components are used to create various parts of the UI, such as forms, lists, navigation menus, and more.</li>
+            <li>Vue Router is used for client-side routing, allowing you to define routes and navigate between different views within the SPA (Single Page Application).</li>
+        </ul>
+        <h2>Vue Hosting</h2>
+        <p class="all-p">After you've developed your Vue app, you'll need to host it on a web server so that users can access it online. While there are various hosting options available, including paid services and cloud platforms, <a href="http://aspnetcore.net/" target="_blank">ASPNETCORE.NET</a> is one of the best and always free.</p>
+        <p class="all-p"><a href="http://aspnetcore.net/" target="_blank">ASPNETCORE.NET</a> is a hosting platform that provides services for hosting ASP.NET Core, Blazor apps, React, Angular, and Vue.js applications.</p>
+       
+
+     
+		<div class="mt-3 pt-3 clearfix">
+			<h1>Summary</h1>
+			<img src="images/vue-sum.png" class="img-fluid" alt="">
+			
+<p>Vue.js is an easy-to-learn JavaScript framework for making dynamic web apps. We've covered the basics in this guide, including key concepts and how to start. We also discussed using Vue.js with ASP.NET Core for modern web apps. As you continue, you'll discover more advanced features for creating impressive web apps.</p>
+		</div>
+		
+		
+	</div>
+</div>
+
+<!--
+:::::accordian Section
+-->
+<div id="inj" class="acc_area pb-5 blazor_faq">
+	<div class="container">		
+<h1>FAQs about Vue</h1>
+		<div class="row gx-5">
+			<div class="col-lg-6 sky_sec">
+				
+				<div class="accordion pt-0" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOn">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+						What is Vue.js?
+					  </button>
+					</h2>
+					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+                        Vue.js is a progressive JS framework used for building user interfaces, known for its simplicity and reactivity.					  </div>
+					</div>
+				  </div>
+				 
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How to install Vue.js?					  </button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+                        You can install Vue.js by including it in your HTML file via a script tag or by using package manager like npm or yarn.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What is Webpack in Vue.js?					  </button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+                        Webpack is a popular build and bundler tool used in Vue.js projects to bundle and manage JavaScript / CSS files and other assets.					  </div>
+					</div>
+				  </div>
+	
+					</div>
+			</div>
+
+			<div id="rt" class="col-lg-6 sky_sec">
+				  
+				<div class="accordion pt-0" id="accordionExample1">
+				 
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                        Who owns Vue.js?					  </button>
+					</h2>
+					<div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+                        Vue.js is an open-source project maintained by a group of independent developers and it is not owned by any specific company.					  </div>
+					</div>
+				  </div>
+				 
+				 <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree11">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree11" aria-expanded="false" aria-controls="collapseThree11">
+                        Why use Vue.js?					  </button>
+					</h2>
+					<div id="collapseThree11" class="accordion-collapse collapse" aria-labelledby="headingThree11" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+                        Vue.js is used for building user interfaces due to its simplicity and a large ecosystem of libraries and plugins making it a very handy choice for web development.					  </div>
+					</div>
+				  </div>
+
+				
+					</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div><a href="#"><img src="images/f-logo.png" class="img-fluid" alt=""></a></div>
+		<div class="pt-4 mt-4">
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about-us.html">About Us</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Contact </a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="copy">&copy; 2023 ASPNETCore.net</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script>
+        $(function () { 
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo1.png');
+                }
+                if ($(this).scrollTop() < 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo.png');
+                }
+            })
+        });
+    </script>
+<script>
+$("#more1").click(function(){
+    $("#more1").hide();
+});
+$("#more2").click(function(){
+    $("#more2").hide();
+});
+$("#more3").click(function(){
+    $("#more3").hide();
+});
+</script>
+</body>
+</html>
