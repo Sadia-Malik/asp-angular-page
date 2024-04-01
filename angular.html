@@ -147,12 +147,13 @@
 <h3 class="angular-h3">Angular vs AngularJS</h3>
 <p>Before diving deeper into Angular, let's clarify the difference between Angular and AngularJS. AngularJS, often referred to as Angular 1, was the first version of the framework and is discontinued now. However, Angular (without the "JS") represents a complete rewrite of AngularJS and is often referred to as Angular 2+ or just Angular. The key difference is that Angular is built using TypeScript, which is a statically typed superset of JavaScript, while AngularJS uses plain JavaScript.</p>
 <h3 class="angular-h3">Angular Versions</h3>
-<p>Angular, like many software projects, has different versions. It's essential to use the latest version of Angular to take advantage of the newest features, improvements, and security updates.
+<p>Angular, like many software projects, has different versions. It's essential to use the latest version of Angular to take advantage of the newest features, improvements, and security updates. 
 
-</p>
-<p>At the time of writing this article, the latest version of Angular is Angular 16.2, but it's always a good idea to check the <a href="https://angular.io/guide/releases" target="_blank">Angular website</a> website for the most up-to-date information.</p>
+</p> <br>
+<p> At the time of writing this article, the latest version of Angular is Angular 16.2, but it's always a good idea to check the official Angular website for the most up-to-date information.</p>
+<!-- <p>At the time of writing this article, the latest version of Angular is Angular 16.2, but it's always a good idea to check the <a href="https://angular.io/guide/releases" target="_blank">Angular website</a> website for the most up-to-date information.</p> -->
 <h3 class="angular-h3">Angular Components</h3>
-<p>Angular applications are built using component-based architecture. Angular Components are building blocks of an Angular application, and they encapsulate the HTML, CSS, and TypeScript code needed for a specific part of the user interface.</p>
+<p>Angular applications are built using component-based architecture. Angular Components are building blocks of an Angular application, and they encapsulate the HTML, CSS, and TypeScript code needed for a specific part of the user interface. 	</p> <br>
 <p>For example, if you're building an e-commerce website, you might have components for the product list, product details, shopping cart, and more. These components can be reused throughout your application, making it easier to manage and maintain.</p>
 <h3 class="angular-h3">Angular Forms</h3>
 <p>Angular provides powerful tools for working with forms. Whether you need a simple login form or a complex multi-step wizard, Angular's form features have got you covered. You can easily create forms, validate user input, and handle form submissions.</p>
@@ -204,11 +205,11 @@
 		<h2>Angular Tutorial</h2>
 		<p>Let’s start with a very basic Hello Word tutorial. We will create a simple component here and show it on the main page.</p>
 		<h3>Install Node JS:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>Make sure you have Node.js and npm (Node Package Manager) installed on your computer. You can download Node.js from its <a href="https://nodejs.org/en/download" target="_blank">official site</a>. It also includes npm.</li>
 		</ul>
 		<h3>Install Angular CLI:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>Open your terminal or command prompt.</li>
 			<li>Run this command to install Angular CLI globally:			</li>
 		</ul>
@@ -216,42 +217,42 @@
         <p>npm install  -g @angular/cli</p>
 	   </div>
 	   <h3>Create a New Angular App:</h3>
-	    <ul>
+	    <ul class="list-img">
 			<li>Open the terminal or command prompt and navigate to the directory where you want to create your Angular project and run:</li>
 		</ul>
 		<div class="code">
 			<p>ng <span class="skytxt">new</span> hello-world-app</p>
 		</div>
-		<ul>
+		<ul class="list-img">
 			<li>Follow the prompts to configure your project (you can choose the defaults for most options).</li>
 		</ul>
 		<h3> Generate Component:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>In terminal, navigate to the project folder you just created:</li>
 		</ul>
 		<div class="code">
 			<p>cd hello-world-app</p>
 		</div>
-		<ul>
+		<ul class="list-img">
            <li> Then, generate a new component using Angular CLI: ng generate component hello</li>	
 		</ul>
        <h3>Edit Component:</h3>
-	   <ul>
+	   <ul class="list-img">
 		<li>Open src/app/hello/hello.component.html in code editor and replace its content with: <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></li>
 	   </ul>
 	   <h3>Display Angular Component:</h3>
-	    <ul>
+	    <ul class="list-img">
 			<li>Open src/app/app.component.html and add the <code>&lt;app-hello&gt;&lt;/app-hello&gt;</code> tag at the end of the existing HTML.</li>
 		</ul>
 		<h3>Run Angular App:</h3>
-		<ul>
-			<li>Start the development server using this command: ng serve</li>
-			<li>Visit http://localhost:4200/ in the web browser, and you should see your "Hello, World!" message displayed at the end of the default Angular HTML page.</li>
+		<ul class="list-img">
+			<li >Start the development server using this command: ng serve</li>
+			<li>Visit http://localhost:4200/ in the web browser, and you should see your "Hello, World!" message displayed at the end of the default Angular HTML page.</li> <br>
 		</ul>
 		<h2>Angular with ASP.NET Core</h2>
 		<p>Now that you have a basic understanding of Angular, let's explore how you can use Angular with ASP.NET Core, a popular framework for building server-side web applications.</p>
 		<p>Angular and ASP.NET Core are a powerful combination for building modern web applications. Here are some reasons why they work well together:		</p>
-		<ul>
+		<ul class="list-img">
 			<li>Separation of Concerns: Angular handles the client-side user interface, while ASP.NET Core takes care of the server-side logic. This separation allows for cleaner code and better maintainability.</li>
 			<li>API Integration: Angular can easily consume RESTful APIs created with ASP.NET Core, enabling seamless communication between the front-end and backend of your application.</li>
 			<li>Single-Page Applications (SPAs): Angular is well-suited for creating SPAs, where the entire application loads in a single HTML page, and navigation happens dynamically without full page reloads. ASP.NET Core can serve as the backend for such applications.</li>
@@ -259,7 +260,7 @@
 		<h3>Steps for Creating an Angular and ASP.NET Core Application</h3>
 		<p>Let's walk through a simple example of creating a task management application using Angular for the front-end and ASP.NET Core for the backend.</p>
 		<h3>Angular Frontend:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>Create Angular components for tasks, task lists, and task creation forms.</li>
 			<li>Use Angular forms to collect and validate task data.</li>
 			<li>Implement Angular routing for navigating between different views.</li>
@@ -267,13 +268,13 @@
 			<li><h5>Integration:</h5></li>
 		</ul>
 		<h3>ASP.NET Core Backend:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>Create a RESTful API for managing tasks, including endpoints for creating, updating, deleting, and fetching tasks.</li>
 			<li>Implement data validation and error handling in the backend.</li>
 			<li>Secure the API using authentication and authorization mechanisms if necessary.</li>
 		</ul>
 		<h3>Integration:</h3>
-		<ul>
+		<ul class="list-img">
 			<li>Configure Angular to make HTTP requests to the ASP.NET Core API endpoints.</li>
 			<li>Handle data sent from the backend in the front-end and display it to the user.</li>
 			<li>Implement error handling in Angular to gracefully handle API errors.</li>
@@ -308,7 +309,7 @@
 -->
 <div id="inj" class="acc_area pb-5 blazor_faq">
 	<div class="container">		
-<h1>FAQs about Angular</h1>
+<h1 class="ang-faq">FAQs about Angular</h1>
 		<div class="row gx-5">
 			<div class="col-lg-6 sky_sec">
 				

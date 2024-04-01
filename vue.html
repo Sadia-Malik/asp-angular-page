@@ -116,7 +116,7 @@
 					<h1>Vue.js</h1>
 					<div class="clearfix">
 						
-<p>Vue.js (in short “Vue” and often pronounced as "view") is an open-source JavaScript framework used for building user interfaces and single page applications, known for its simplicity and reactivity system. It was created by Evan You, a former Google employee. Published under the MIT License, which means that it's free to use, modify, and distribute.</p>
+<p>Vue.js (in short “Vue” and often pronounced as "view") is an open-source JavaScript framework used for building user interfaces and single page applications, known for its simplicity and reactivity system. It was created by Evan You, a former Google employee. Published under the MIT License, which means that it's free to use, modify, and distribute.</p> <br> 
 <p>Vue.js is a progressive and flexible web framework that was designed to be easy to learn while still being powerful enough to build complex and scalable applications. Here we will take a closer look at what Vue.js is and why it's a great choice for ASP.NET Core developers.</p>
 
 					</div>
@@ -132,21 +132,21 @@
 		  <div class="blazor_box ">
 		    <img src="images/vue1.png"/>
 			<h3>Vue vs React</h3>
-            <p>React developed by Facebook is one of the most popular JavaScript libraries for building UIs. It offers a highly efficient way to render and update UI components. However, React comes with a steeper learning curve, especially for beginners.</p>
+            <p>React developed by Facebook is one of the most popular JavaScript libraries for building UIs. It offers a highly efficient way to render and update UI components. However, React comes with a steeper learning curve, especially for beginners. <br> <br> Vue.js, on the other hand, is known for its gentle learning curve. Its syntax is easy to understand which makes it an excellent choice for developers who are just starting. You can start building small projects with Vue.js relatively quickly.</p>
 		  </div>
 		</div>
 		<div class="col-md-4 col-sm-12">
 		   <div class="blazor_box">
 		    <img src="images/vue2.png"/>
 			<h3>Vue vs Angular</h3>
-			<p>Angular developed by Google is a comprehensive framework for building web applications. While it provides a robust set of tools it can be overwhelming for beginner web developers due to its complexity.</p>
+			<p>Angular developed by Google is a comprehensive framework for building web applications. While it provides a robust set of tools it can be overwhelming for beginner web developers due to its complexity. <br> <br>     Vue.js, in contrast, is lightweight and focused on the view layer of your application. It's easy to integrate with other libraries or existing projects, making it a versatile choice.</p>
 		  </div>
 		</div>
 		<div class="col-md-4 col-sm-12">
 			<div class="blazor_box">
 		    <img src="images/vue3.png"/>
 			<h3>Vue Components</h3>
-			<p>Vue.js is built around the concept of components. A component is a self-contained, reusable piece of code that encapsulates a specific part of your user interface. Components make it easier to manage complex UIs by breaking them down into smaller and more manageable pieces.</p>
+			<p>Vue.js is built around the concept of components. A component is a self-contained, reusable piece of code that encapsulates a specific part of your user interface. Components make it easier to manage complex UIs by breaking them down into smaller and more manageable pieces. <br> <br>    For example, you might have a header component, a sidebar component, and a footer component, each responsible for rendering its respective part of the web page. <br> <br> With a build step, Vue components are typically defined in dedicated files with the .vue extension, called Single File Components (SFC). Without a build step, a Vue component is just a plain JavaScript object with Vue-specific settings.</p>
 		  </div>
 		</div>
 	  </div>
@@ -155,38 +155,71 @@
 	</div>
 </div>
 
-<div class="container">
-    <h3 class="angular-h3">
-        Vue Props
-    </h3>
-    <p>Vue Props (short for properties) is a way for passing data from parent component to a child component. They allow you to make your components more flexible and reusable. Let's take a look at an example.</p>
-    <h3 class="angular-h3">Vue Data Binding</h3>
-    <p>Data binding in Vue.js allows you to establish a connection between the data in your JavaScript code and the HTML elements in your template. There are two types of data binding:</p>
-    <ul>
-        <li>One-way Data Binding: In one-way data binding, data flows in one direction, from the JavaScript code to the HTML template.
-        </li>
-        <li>Two way Data Binding: Two-way data binding allows data to flow/move in both directions, from the JavaScript code to the HTML template and vice versa. It is primarily used with form elements like input fields.
-        </li>
-    </ul>
-    <h3 class="angular-h3">Vue Directive</h3>
-    <p>Vue.js provides a set of directives that you can use to add special behavior to your HTML elements. Directives are prefixed with “v-” and are used in the form of HTML attributes. Some of Built-in Directive are listed below.
-
-    </p>
-    <ul>
-        <li>v-if: Conditional rendering based on a condition.</li>
-        <li>v-for: Looping through an array to render a list of items.</li>
-        <li>v-on: Adding event listeners to elements.</li>
-        <li>v-bind: Binding values to element attributes.</li>
-        <li>v-model: Creating two-way data binding for form elements.</li>
-        <li>v-show: Conditional rendering with CSS display property.</li>
-        <li>v-pre: Skipping compilation for this element and all its children.</li>
-        <li>v-cloak: Used to keep an element and its children from being compiled until Vue.js is ready.</li>
-        <li>v-once: Render an element and its children only once.</li>
-    </ul>
-</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-12 str">
+            <div class="clearfix">
+                <h3 class="angular-h3">
+                    Vue Props
+                </h3>
+                <p>Vue Props (short for properties) is a way for passing data from parent component to a child component. They allow you to make your components more flexible and reusable. Let's take a look at an example.</p>
+                <h3 class="angular-h3">Vue Data Binding</h3>
+                <p>Data binding in Vue.js allows you to establish a connection between the data in your JavaScript code and the HTML elements in your template. There are two types of data binding:</p>
+                <ul>
+                    <li>One-way Data Binding: In one-way data binding, data flows in one direction, from the JavaScript code to the HTML template.
+                    </li>
+                    <li>Two way Data Binding: Two-way data binding allows data to flow/move in both directions, from the JavaScript code to the HTML template and vice versa. It is primarily used with form elements like input fields.
+                    </li>
+                </ul>
+                <h3 class="angular-h3">Vue Directive</h3>
+                <p>Vue.js provides a set of directives that you can use to add special behavior to your HTML elements. Directives are prefixed with “v-” and are used in the form of HTML attributes. Some of Built-in Directive are listed below.
+            
+                </p>
+                <ul>
+                    <li>v-if: Conditional rendering based on a condition.</li>
+                    <li>v-for: Looping through an array to render a list of items.</li>
+                    <li>v-on: Adding event listeners to elements.</li>
+                    <li>v-bind: Binding values to element attributes.</li>
+                    <li>v-model: Creating two-way data binding for form elements.</li>
+                    <li>v-show: Conditional rendering with CSS display property.</li>
+                    <li>v-pre: Skipping compilation for this element and all its children.</li>
+                    <li>v-cloak: Used to keep an element and its children from being compiled until Vue.js is ready.</li>
+                    <li>v-once: Render an element and its children only once.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
 
 <div class="code_area blazor_code">
 	<div class="container">
+        <h3 class="angular-h3">
+            Vue Props
+        </h3>
+        <p>Vue Props (short for properties) is a way for passing data from parent component to a child component. They allow you to make your components more flexible and reusable. Let's take a look at an example.</p>
+        <h3 class="angular-h3">Vue Data Binding</h3>
+        <p>Data binding in Vue.js allows you to establish a connection between the data in your JavaScript code and the HTML elements in your template. There are two types of data binding:</p>
+        <ul class="list-img">
+            <li>One-way Data Binding: In one-way data binding, data flows in one direction, from the JavaScript code to the HTML template.
+            </li>
+            <li>Two way Data Binding: Two-way data binding allows data to flow/move in both directions, from the JavaScript code to the HTML template and vice versa. It is primarily used with form elements like input fields.
+            </li>
+        </ul>
+        <h3 class="angular-h3">Vue Directive</h3>
+        <p>Vue.js provides a set of directives that you can use to add special behavior to your HTML elements. Directives are prefixed with “v-” and are used in the form of HTML attributes. Some of Built-in Directive are listed below.
+    
+        </p>
+        <ul class="list-img">
+            <li>v-if: Conditional rendering based on a condition.</li>
+            <li>v-for: Looping through an array to render a list of items.</li>
+            <li>v-on: Adding event listeners to elements.</li>
+            <li>v-bind: Binding values to element attributes.</li>
+            <li>v-model: Creating two-way data binding for form elements.</li>
+            <li>v-show: Conditional rendering with CSS display property.</li>
+            <li>v-pre: Skipping compilation for this element and all its children.</li>
+            <li>v-cloak: Used to keep an element and its children from being compiled until Vue.js is ready.</li>
+            <li>v-once: Render an element and its children only once.</li>
+        </ul>
 		<h2>Vue Tutorial        </h2>
         <h3>Install Vue        </h3>
         <p>There are several ways to start using Vue.js, but for this guide, we'll keep it simple by including Vue.js through a Content Delivery Network (CDN). This means you won't have to download or install anything to get started.</p>
@@ -241,7 +274,7 @@
         </div>
         
         <p>In this example, we:</p>
-        <ul>
+        <ul class="list-img">
             <li>Include Vue.js using a CDN.</li>
             <li>Create a Vue app instance using Vue.createApp().</li>
             <li>Define a data object to store our application's data.</li>
@@ -255,7 +288,7 @@
 		<h3>Frontend Development with Vue.js:
 
         </h3>
-        <ul>
+        <ul class="list-img">
             <li>You start by developing the frontend of your web application using Vue.js. Vue.js is responsible for creating the user interface and handling client-side interactions.</li>
             <li>Vue.js components are used to create various parts of the UI, such as forms, lists, navigation menus, and more.</li>
             <li>Vue Router is used for client-side routing, allowing you to define routes and navigate between different views within the SPA (Single Page Application).</li>
